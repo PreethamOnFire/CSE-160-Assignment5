@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Solar System Map</title>
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.176.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.176.0/examples/jsm/"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas class="screen" id="screen"></canvas>
+    <div id="introMenu">
+        <div id="Title"><strong>Explore the Solar System in the Normandy</strong></div>
+        <div id="prompt">PRESS ANY KEY</div>
+    </div>
+    <div id="planetUI">
+      <h2 id="planetName">Planet Name</h2>
+      <div class="planet-info">
+          <div class="info-row">
+              <span class="info-label">Distance from Sun:</span>
+              <span class="info-value" id="planetDistance">-</span>
+          </div>
+          <div class="info-row">
+              <span class="info-label">Radius:</span>
+              <span class="info-value" id="planetRadius">-</span>
+          </div>
+          <div class="info-row">
+              <span class="info-label">Orbital Period:</span>
+              <span class="info-value" id="planetPeriod">-</span>
+          </div>
+          <div class="info-row">
+              <span class="info-label">Temperature:</span>
+              <span class="info-value" id="planetTemp">-</span>
+          </div>
+          <div class="info-row">
+              <span class="info-label">Composition:</span>
+              <span class="info-value" id="planetComposition">-</span>
+          </div>
+          <div class="info-row">
+              <span class="info-label">Moons:</span>
+              <span class="info-value" id="planetMoons">-</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="controls-help">
+        <strong>Controls:</strong><br>
+        WASD - Move Normandy<br>
+        E - Focus/Exit on selected planet<br>
+        Mouse Click and Drag - Camera control<br>
+        Credits: <br>
+        Music and Spaceship Model: Mass effect <br>
+        Textures: Solar System Scope <br>
+        Notes for Graders: <br>
+        I think the hardest thing to see is which lights are being used. <br>
+        There is a point light, ambient light, and a spotlight. <br> The Spotlight is on the spaceship. <br>
+        To see the spotlight run into a planet or into the asteroid belt.<br>
+    </div>
+    <script type="module" src="/SolarSystem.js"></script>
+  </body>
+</html>
